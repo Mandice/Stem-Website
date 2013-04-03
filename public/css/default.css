@@ -1,0 +1,92 @@
+body {
+	background: url(/img/bg.png);
+	font-family: 'Varela Round';
+}
+
+.container-narrow {
+	margin: 0 auto;
+	max-width: 1000px;
+}
+
+.container-narrow > hr {
+	margin: 30px 0;
+}
+
+.navbar {
+/*	background-image: url(/img/navbar_bg.png);*/
+}
+
+.navbar .navbar-inner {
+	padding: 0px;
+/*
+	background-color: transparent;
+	background-image: -moz-linear-gradient(top, rgba(255,255,255,0.9), rgba(255,255,255,0));
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(255,255,255,0.9)), to(rgba(255,255,255,0)));
+	background-image: -webkit-linear-gradient(top, rgba(255,255,255,0.9), rgba(255,255,255,0));
+	background-image: -o-linear-gradient(top, rgba(255,255,255,0.9), rgba(255,255,255,0));
+	background-image: linear-gradient(to bottom, rgba(255,255,255,0.9), rgba(255,255,255,0));
+*/
+}
+.navbar .nav {
+	margin: 0;
+	display: table;
+	width: 100%;
+}
+.navbar .nav li {
+	display: table-cell;
+	width: 1%;
+	float: none;
+	text-shadow: 0px -1px 0px #000;
+}
+.navbar .nav li a {
+	font-weight: bold;
+	text-align: center;
+	border-left: 1px solid rgba(255,255,255,.1);
+	border-right: 1px solid rgba(0,0,0,.5);
+	text-shadow: 0px -1px 0px #000;
+}
+.navbar .nav li:first-child a {
+	border-left: 0;
+	border-radius: 3px 0 0 3px;
+}
+.navbar .nav li:last-child a {
+	border-right: 0;
+	border-radius: 0 3px 3px 0;
+}
+
+.logo {
+	margin: 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Varela Round';
+}
+
+.banner {
+	text-align: center;
+	text-shadow: 0px -1px 1px #000;
+}
+
+.banner h1 {
+	font-size: 80px;
+	line-height: 1;
+}
+
+.banner h2 {
+	font-size: 60px;
+	line-height: 1;
+}
+
+.banner h3 {
+	font-family: 'Oxygen';
+	font-weight: normal;
+}
+
+.banner .download-button {
+	padding: 20px;
+}
+
+.banner .mark {
+	width: 300px;
+	height: 300px;
+}
