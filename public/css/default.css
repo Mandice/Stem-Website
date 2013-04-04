@@ -76,3 +76,23 @@ body {
 	width: 300px;
 	height: 300px;
 }
+
+.banner .mark-light {
+	/* fallback */
+	background-color: #2F2727;
+	background-image: url(images/radial_bg.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+
+	/* Safari 4-5, Chrome 1-9 */
+	background: -webkit-gradient(radial, 45% 50%, 0, 80% 40%, 100, from(rgba(255,255,200,0.2)), to(rgba(0,0,0,0)));
+
+	/* Safari 5.1+, Chrome 10+ */
+	background: -webkit-radial-gradient(45% 50%, closest-corner, rgba(255,255,200,0.2), rgba(0,0,0,0));
+
+	/* Firefox 3.6+ */ 
+	background: -moz-radial-gradient(45% 50%, closest-corner, rgba(255,255,200,0.2), rgba(0,0,0,0));
+
+	/* IE 10 */ 
+	background: -ms-radial-gradient(45% 50%, closest-corner, rgba(255,255,200,0.2), rgba(0,0,0,0));
+}
