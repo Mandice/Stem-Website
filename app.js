@@ -55,7 +55,7 @@ app.locals.markdown = require("node-markdown").Markdown;
 // Initializing Routes
 var courser = new Courser(app);
 courser.addPath(__dirname + '/routes/router');
-courser.addGlobalPath(__dirname + '/routes/global');
+//courser.addGlobalPath(__dirname + '/routes/global');
 courser.init(function() {
 	app.listen(5002);
 	console.log('Stem website is ready.');
