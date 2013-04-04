@@ -2,6 +2,7 @@ var express = require('express');
 var i18n = require("i18next");
 var Courser = require('courser');
 var CookieStore = require('cookie-sessions');
+//var md = require("node-markdown").Markdown;
 
 // Environment Settings
 if (!process.env.NODE_ENV)
@@ -43,6 +44,13 @@ app.configure('development', function(){
 app.configure('production', function(){
 	app.use(express.errorHandler()); 
 });
+
+app.locals.configs = {
+	appPath: __dirname,
+	documentationPath: __dirname + '/documentation'
+};
+
+app.locals.markdown = require("node-markdown").Markdown;
 
 // Initializing Routes
 var courser = new Courser(app);
