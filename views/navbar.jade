@@ -22,7 +22,12 @@ div.navbar
 				a(href='#') Demo
 			li
 				a(href='#') Download
-			li
-				a(href='#') Documentation
+
+			- if (currentPath == '/doc')
+				li.active
+					a(href='/doc') Documentation
+			- else
+				li
+					a(href='/doc') Documentation
 
 
