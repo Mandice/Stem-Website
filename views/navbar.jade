@@ -30,4 +30,10 @@ div.navbar
 				li
 					a(href='/doc') Documentation
 
+			- if (currentPath == '/support')
+				li.active
+					a(href='/support') Support
+			- else
+				li
+					a(href='/support') Support
 

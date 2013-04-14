@@ -1,0 +1,11 @@
+extends layout
+
+block content
+
+	div.container-narrow
+
+		include navbar
+
+		div
+			!= markdown(content)
+
