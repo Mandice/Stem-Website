@@ -1,40 +1,40 @@
 
-### Create your own Stem Application
+### 開發屬於你自己的Stem Application
 
-#### [Chapter One] Introduce
-<p>Create a folder named Mandicelogic, and make sure you have following files or folders:</p>
+#### [第一章節] 介紹
+<p>建立一個資料夾Mandicelogic, 並且確定有以下的資料夾或檔案:</p>
  - Run
- - node_modules folder
+ - program 資料夾
  - Mandicelogic-${PROJECT_NAME}.conf
- - package.json
 
-Use zip to compress Mandicelogic folder. Please rename this compress file as Mandicelogic-${PROJECT_NAME}.zip.
+進入到Mandicelogic的資料夾中並把所有檔案壓縮成Mandicelogic-${PROJECT_NAME}.zip檔。
 
-#### [Chapter Two] Core Component
+#### [第二章節] 主要元件介紹
 ##### 1) Run
-A script file to describe how to execute your app.
+用來執行你開發的nodeJS應用軟體。
 
-Example with node.js:
+範例一: 使用node.js:
 
 	#!/bin/bash 
-	node app.js 
+	node program/app.js 
 	
-Example with node-webkit:
+範例二: 使用node-webkit:
 
 	#!/bin/bash 
-	nw .
+	nw program
 
-##### 2) node_modules folder
-Please put all node_module you need into this folder.
+##### 2) program 資料夾
+把你所開發的nodeJS的程式碼全都放到這資料夾底下。<p></p>
+備註: 由於Stem OS不允許執行"npm install", 所以請把你所有的nodeJS moduule預先放到program/node_modules資料夾中。
 ##### 3) Mandicelogic-${PROJECT_NAME}.conf
-You will have a developer ID if you register from our website, and plesae put your develop ID into this file.
-##### 4) package.json
-Create a new field called Middleware in package.json, the stem OS will check at least foure flags to determine how to run the stem application.
-#####[Note] a picture to show the relationship of aufs and rootfs.
- - arch: x86 or ARM.
- - signature: Program ID. Please ask The Mandice contributors for your program ID.
- - portable: Determine how to run the stem application.
-   - false: Run the Stem application in the AUFS mode.
-   - true: Install this Stem application into Stem OS and the application will not disappear. (Coming soon!)
- - Install: Install the debian package file into system. (Coming soon!)
-
+Stem OS會檢查此檔案中的設定來決定該怎麼執行Stem Application。
+#####[Note] a picture to show the relationship of aufs and rootfs。
+ - arch: x86 或 ARM。
+ - signature: Stem application的程式執行ID. 如果沒有請向Mandice團隊建立屬於你的program ID。 <p></p>
+   如果你沒有Signature, 請使用DevOnly的設定, 並且不要把Signature設定寫到Mandicelogic-${PROJECT_NAME}.conf檔案中。 <p></p>
+ - portable: 用來判斷該如何執行Stem Application。
+   - true: 在AUFS模式執行Stem Application。
+   - false: 安裝Stem application到Stem OS中, 並且Stem Application不會因為USB隨身碟plug out而移除。 <p></p>
+ - DevOnly: 是否在開發者模式執行Stem Application。
+   - true: Stem OS會產生一組暫時的signature來執行Stem Application。
+   - false: Stem OS不會使用開發者模式。

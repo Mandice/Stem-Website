@@ -1,28 +1,23 @@
 
-### Manual & Documentation
+### 說明及文件
 
 
-#### Table of Contents
+#### 目錄
 
 
-* [Chapter one] General
-	- Installation
-		1. Install Stem OS from iso image.
-			- Download the iso image from [Download](http://192.168.2.130:5002/Download).
-			- Use iso tool to burn the iso image into a CD/DVD.
-			- Find a x86 PC to install the Stem OS.
-		2. Install Stem application.
-			- Put your Stem application into root directory of usb flash drive.
-			- Plugin the usb flash dirve into the x86 PC with Stem OS.
+* [第一章節] 快速使用
+	- 安裝
+		1. 用iso光碟安裝Stem OS.
+			- 首先先從 [Download](http://192.168.2.130:5002/Download) 頁面下載iso檔.
+			- 透過光碟燒錄軟體把iso檔燒到CD/DVD光碟片中.
+			- 找一台x86的電腦並用光碟片安裝Stem OS.
+		2. 執行Stem Application.
+			- 把Stem application放到USB隨身碟的根目錄(/).
+			- 把USB隨身碟plug in到有安裝Stem OS的x86電腦中.
 		
-* [Chapter one] Development
-	- Quick Example
-		- [TOEFL](doc/TOEFL).
+* [第二章節] 開發
+	- 開發範例
 		- [efax](doc/efax).
 		- [Appstore](doc/Appstore).
-	- Package application
-	<p>Create your own [Stem Application](doc/StemApp). </p>
-	- Rebuild your own stem OS.
-	<p>There are the quick guides to show you how to install the stem OS from scratch: </p>
-		1. Build the Stem [RootFS](doc/RootFS) first.
-		2. Install [Base system](doc/BaseSystem) of Stem.
+	- Stem軟體開發方法
+	<p>開發屬於你自己的[Stem Application](doc/StemApp). </p>
