@@ -16,7 +16,7 @@ function doc(req, res) {
 		topic = path.basename(req.params.topic);
 	}
 
-	var docPath = res.app.locals.configs.documentationPath + '/doc/' + topic + '.md';
+	var docPath = res.app.locals.configs.documentationPath + '/' + req.locale + '/doc/' + topic + '.md';
 
 	var stream = fs.createReadStream(docPath);
 	stream.setEncoding('utf8');

@@ -17,7 +17,7 @@ function index(req, res) {
 function about(req, res) {
 	var buffer = [];
 
-	var stream = fs.createReadStream(res.app.locals.configs.documentationPath + '/about.md');
+	var stream = fs.createReadStream(res.app.locals.configs.documentationPath + '/' + req.locale + '/about.md');
 	stream.setEncoding('utf8');
 
 	stream.on('error', function(error) {
@@ -40,7 +40,7 @@ function about(req, res) {
 function support(req, res) {
 	var buffer = [];
 
-	var stream = fs.createReadStream(res.app.locals.configs.documentationPath + '/support.md');
+	var stream = fs.createReadStream(res.app.locals.configs.documentationPath  + '/' + req.locale + '/support.md');
 	stream.setEncoding('utf8');
 
 	stream.on('error', function(error) {
