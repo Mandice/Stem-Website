@@ -8,8 +8,12 @@ div.navbar
 
 		ul.nav.pull-right
 
-			li
-				a(href='#') News
+			- if (currentPath == '/news')
+				li.active
+					a(href='/News') News
+			- else
+				li
+					a(href='/News') News
 
 			- if (currentPath == '/about')
 				li.active
@@ -18,10 +22,20 @@ div.navbar
 				li
 					a(href='/about') About Stem
 
-			li
-				a(href='#') Demo
-			li
-				a(href='#') Download
+			- if (currentPath == '/Demo')
+				li.active
+					a(href='/Demo') Demo
+			- else
+				li
+					a(href='/Demo') Demo
+				
+			- if (currentPath == '/download')
+				li.active
+					a(href='/download') Download
+			- else
+				li
+					a(href='/download') Download
+
 
 			- if (currentPath.substr(0, 4) == '/doc')
 				li.active

@@ -4,14 +4,40 @@ var stream = require('stream');
 
 module.exports = {
 	'/': index,
+	'/News': news,
 	'/about': about,
-	'/support': support
+	'/support': support,
+	'/Demo': demo,
+	'/download': download
 };
 
 function index(req, res) {
 
 	res.locals.currentPath = req.path;
 	res.render('index', { title: 'Stem Operating System' });
+}
+
+function news(req, res) {
+	var buffer = [];
+
+	var stream = fs.createReadStream(res.app.locals.configs.documentationPath + '/' + req.locale + '/news.md');
+	stream.setEncoding('utf8');
+
+	stream.on('error', function(error) {
+		console.error(error.toString());
+	});
+
+	stream.on('data', function(data) {
+		buffer.push(data);
+	});
+
+	stream.on('end', function() {
+		var content = buffer.join('');
+
+		res.locals.markdown = res.app.locals.markdown;
+		res.locals.currentPath = req.path;
+		res.render('news', { title: 'Stem Operating System', content: content });
+	});
 }
 
 function about(req, res) {
@@ -57,5 +83,51 @@ function support(req, res) {
 		res.locals.markdown = res.app.locals.markdown;
 		res.locals.currentPath = req.path;
 		res.render('support', { title: 'Stem Operating System', content: content });
+	});
+}
+
+function demo(req, res) {
+	var buffer = [];
+
+	var stream = fs.createReadStream(res.app.locals.configs.documentationPath + '/' + req.locale + '/demo.md');
+	stream.setEncoding('utf8');
+
+	stream.on('error', function(error) {
+		console.error(error.toString());
+	});
+
+	stream.on('data', function(data) {
+		buffer.push(data);
+	});
+
+	stream.on('end', function() {
+		var content = buffer.join('');
+
+		res.locals.markdown = res.app.locals.markdown;
+		res.locals.currentPath = req.path;
+		res.render('demo', { title: 'Stem Operating System', content: content });
+	});
+}
+
+function download(req, res) {
+	var buffer = [];
+
+	var stream = fs.createReadStream(res.app.locals.configs.documentationPath + '/' + req.locale + '/download.md');
+	stream.setEncoding('utf8');
+
+	stream.on('error', function(error) {
+		console.error(error.toString());
+	});
+
+	stream.on('data', function(data) {
+		buffer.push(data);
+	});
+
+	stream.on('end', function() {
+		var content = buffer.join('');
+
+		res.locals.markdown = res.app.locals.markdown;
+		res.locals.currentPath = req.path;
+		res.render('download', { title: 'Stem Operating System', content: content });
 	});
 }
