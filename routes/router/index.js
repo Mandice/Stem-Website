@@ -11,6 +11,15 @@ module.exports = {
 	'/download': download
 };
 
+function curLocale(locale) {
+	var lang = 'en-US';
+
+	if (locale == 'en')
+		return 'en-US';
+
+	return locale;
+}
+
 function index(req, res) {
 
 	res.locals.currentPath = req.path;
@@ -20,7 +29,7 @@ function index(req, res) {
 function news(req, res) {
 	var buffer = [];
 
-	var stream = fs.createReadStream(res.app.locals.configs.documentationPath + '/' + req.locale + '/news.md');
+	var stream = fs.createReadStream(res.app.locals.configs.documentationPath + '/' + curLocale(req.locale) + '/news.md');
 	stream.setEncoding('utf8');
 
 	stream.on('error', function(error) {
@@ -43,7 +52,7 @@ function news(req, res) {
 function about(req, res) {
 	var buffer = [];
 
-	var stream = fs.createReadStream(res.app.locals.configs.documentationPath + '/' + req.locale + '/about.md');
+	var stream = fs.createReadStream(res.app.locals.configs.documentationPath + '/' + curLocale(req.locale) + '/about.md');
 	stream.setEncoding('utf8');
 
 	stream.on('error', function(error) {
@@ -66,7 +75,7 @@ function about(req, res) {
 function support(req, res) {
 	var buffer = [];
 
-	var stream = fs.createReadStream(res.app.locals.configs.documentationPath  + '/' + req.locale + '/support.md');
+	var stream = fs.createReadStream(res.app.locals.configs.documentationPath  + '/' + curLocale(req.locale) + '/support.md');
 	stream.setEncoding('utf8');
 
 	stream.on('error', function(error) {
@@ -89,7 +98,7 @@ function support(req, res) {
 function demo(req, res) {
 	var buffer = [];
 
-	var stream = fs.createReadStream(res.app.locals.configs.documentationPath + '/' + req.locale + '/demo.md');
+	var stream = fs.createReadStream(res.app.locals.configs.documentationPath + '/' + curLocale(req.locale) + '/demo.md');
 	stream.setEncoding('utf8');
 
 	stream.on('error', function(error) {
@@ -112,7 +121,7 @@ function demo(req, res) {
 function download(req, res) {
 	var buffer = [];
 
-	var stream = fs.createReadStream(res.app.locals.configs.documentationPath + '/' + req.locale + '/download.md');
+	var stream = fs.createReadStream(res.app.locals.configs.documentationPath + '/' + curLocale(req.locale) + '/download.md');
 	stream.setEncoding('utf8');
 
 	stream.on('error', function(error) {

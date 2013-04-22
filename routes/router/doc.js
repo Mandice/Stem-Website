@@ -8,6 +8,15 @@ module.exports = {
 	'/doc/:topic': doc
 };
 
+function curLocale(locale) {
+	var lang = 'en-US';
+
+	if (locale == 'en')
+		return 'en-US';
+
+	return locale;
+}
+
 function doc(req, res) {
 	var buffer = [];
 
@@ -16,7 +25,7 @@ function doc(req, res) {
 		topic = path.basename(req.params.topic);
 	}
 
-	var docPath = res.app.locals.configs.documentationPath + '/' + req.locale + '/doc/' + topic + '.md';
+	var docPath = res.app.locals.configs.documentationPath + '/' + curLocale(req.locale) + '/doc/' + topic + '.md';
 
 	var stream = fs.createReadStream(docPath);
 	stream.setEncoding('utf8');
