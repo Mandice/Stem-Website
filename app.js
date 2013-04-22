@@ -14,6 +14,7 @@ app.configure(function() {
 
 	// Initializing i18n
 	i18n.init({
+		preload: ['en-US', 'zh-TW'],
 		ignoreRoutes: [ 'public/' ],
 		resGetPath: __dirname + '/locales/__ns_____lng__.json'
 	});
