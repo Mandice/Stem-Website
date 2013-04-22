@@ -7,6 +7,10 @@ We will do our best to support this project and help people to use it. If you wo
 
 ## Community
 
+[StemOS on Facebook](https://www.facebook.com/pages/Stem-OS/152024608303853)
+
+[@Stem_OS on Twitter](https://twitter.com/Stem_OS)
+
 Join our IRC channel to discuss with community.
 
 IRC Server: irc.freenode.net
