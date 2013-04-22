@@ -14,7 +14,8 @@ module.exports = {
 function curLocale(locale) {
 	var lang = 'en-US';
 
-	if (locale == 'en')
+	// dev : for facebook scrape
+	if (['en', 'dev'].indexOf(locale) >= 0)
 		return 'en-US';
 
 	return locale;
