@@ -5,7 +5,7 @@
 #### Table of Contents
 
 
-* [Chapter one] General
+* General
 	- Installation
 		1. Install Stem OS from iso image.
 			- Download the iso image from [Download](http://sourceforge.net/projects/stemos/files/latest/download).
@@ -15,7 +15,7 @@
 			- Put your Stem application into root directory of usb flash drive.
 			- Plugin the usb flash dirve into the x86 PC with Stem OS.
 		
-* [Chapter two] Development
+* Development
 	- Quick Example
 		- [webfax](doc/webfax).
 		- [file-explorer](doc/file-explorer).
@@ -26,3 +26,8 @@
 		- [webgl](doc/webgl).
 	- Package application
 	<p>Create your own [Stem Application](doc/StemApp). </p>
+
+* FAQ
+	- [Run Stem OS on VMware, unable to launch application when USB flash drive plug-in](doc/vmware-unable-app).
+	
+----
