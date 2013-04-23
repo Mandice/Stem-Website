@@ -7,7 +7,7 @@ Stem 完全免費，任何人都可以任意從網站上下載通用版本回去
 
 ## 社群
 
-[StemOS on Facebook](https://www.facebook.com/pages/Stem-OS/152024608303853)
+[StemOS on Facebook](https://www.facebook.com/StemOSofficial)
 
 [@Stem_OS on Twitter](https://twitter.com/Stem_OS)
 
