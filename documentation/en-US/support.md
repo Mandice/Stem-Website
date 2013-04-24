@@ -15,8 +15,9 @@ Join our IRC channel to discuss with community.
 
 IRC Server: irc.freenode.net
 
-* \#stemos (English channel)
-* \#stemos-zh (International Chinese channel)
+* \#stemos (English channel) <a href="http://webchat.freenode.net/?channels=#stemos" target="_blank">Open in webchat <img src="/img/external-link.png"></a>
+
+* \#stemos-zh (International Chinese channel) <a href="http://webchat.freenode.net/?channels=#stemos-zh" target="_blank">Open in webchat <img src="/img/external-link.png"></a>
 
 ## Bug Report
 

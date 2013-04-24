@@ -16,10 +16,9 @@ Stem 完全免費，任何人都可以任意從網站上下載通用版本回去
 
 IRC 伺服器位置：irc.freenode.net
 
-* \#stemos （英文頻道）
+* \#stemos （英文頻道）<a href="http://webchat.freenode.net/?channels=#stemos" target="_blank">Open in webchat <img src="/img/external-link.png"></a>
 
-* \#stemos-zh（國際化中文頻道）
-
+* \#stemos-zh（國際化中文頻道）<a href="http://webchat.freenode.net/?channels=#stemos-zh" target="_blank">Open in webchat <img src="/img/external-link.png"></a>
 
 ## 問題回報與解決
 
